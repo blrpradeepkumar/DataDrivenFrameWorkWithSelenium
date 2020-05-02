@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Data Driven Test]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.pradeep.listeners.CustomListeners"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Add Customer Test(failed)">
+    <classes>
+      <class name="com.pradeep.testcases.AddCustomerTest">
+        <methods>
+          <include name="addCustomerTest" invocation-numbers="3"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.pradeep.testcases.AddCustomerTest -->
+    </classes>
+  </test> <!-- Add Customer Test(failed) -->
+  <test thread-count="5" verbose="0" name="Open Account Test(failed)">
+    <classes>
+      <class name="com.pradeep.testcases.OpenAccountTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="openAccountTest" invocation-numbers="0"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.pradeep.testcases.OpenAccountTest -->
+    </classes>
+  </test> <!-- Open Account Test(failed) -->
+</suite> <!-- Failed suite [Data Driven Test] -->
